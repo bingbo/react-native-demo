@@ -1494,12 +1494,27 @@ var _reactNative=require(44 /* react-native */);var
 
 
 
-HelloWorld=function(_React$Component){babelHelpers.inherits(HelloWorld,_React$Component);function HelloWorld(){babelHelpers.classCallCheck(this,HelloWorld);return babelHelpers.possibleConstructorReturn(this,(HelloWorld.__proto__||Object.getPrototypeOf(HelloWorld)).apply(this,arguments));}babelHelpers.createClass(HelloWorld,[{key:'render',value:function render()
+
+MyButton=function(_React$Component){babelHelpers.inherits(MyButton,_React$Component);function MyButton(){babelHelpers.classCallCheck(this,MyButton);return babelHelpers.possibleConstructorReturn(this,(MyButton.__proto__||Object.getPrototypeOf(MyButton)).apply(this,arguments));}babelHelpers.createClass(MyButton,[{key:'_onPressButton',value:function _onPressButton()
+{
+console.log('you tapped the button');
+}},{key:'render',value:function render()
+{
+return(
+_react2.default.createElement(_reactNative.TouchableHighlight,{onPress:this._onPressButton},
+_react2.default.createElement(_reactNative.Text,null,'Button')));
+
+
+}}]);return MyButton;}(_react2.default.Component);var
+
+
+HelloWorld=function(_React$Component2){babelHelpers.inherits(HelloWorld,_React$Component2);function HelloWorld(){babelHelpers.classCallCheck(this,HelloWorld);return babelHelpers.possibleConstructorReturn(this,(HelloWorld.__proto__||Object.getPrototypeOf(HelloWorld)).apply(this,arguments));}babelHelpers.createClass(HelloWorld,[{key:'render',value:function render()
 {
 return(
 _react2.default.createElement(_reactNative.View,{style:styles.container},
 _react2.default.createElement(_reactNative.Text,{style:styles.hello},'Hello, World'),
-_react2.default.createElement(_reactNative.Text,{style:styles.hello},'this is a demo with react-native....')));
+_react2.default.createElement(_reactNative.Text,{style:styles.hello},'this is a demo with react-native....'),
+_react2.default.createElement(MyButton,{style:styles.hello})));
 
 
 }}]);return HelloWorld;}(_react2.default.Component);
